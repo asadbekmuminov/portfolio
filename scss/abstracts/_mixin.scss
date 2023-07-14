@@ -1,0 +1,30 @@
+@mixin font-xl {
+  font-size: $heading-xl-font-size;
+  font-weight: $heading-xl-weight;
+  letter-spacing: $heading-xl-letter;
+  line-height: $heading-xl-line-height;
+  color: $white;
+}
+@mixin font-l {
+  font-size: $heading-l-font-size;
+  font-weight: $heading-l-weight;
+  letter-spacing: $heading-l-letter;
+  line-height: $heading-l-line-height;
+  color: $white;
+}
+@mixin font-m {
+  font-size: $heading-m-font-size;
+  font-weight: $heading-m-weight;
+  line-height: $heading-m-line-height;
+  color: $white;
+}
+@mixin font-text {
+  font-size: $text-font-size;
+  font-weight: $text-weight;
+  line-height: $text-line-height;
+  color: $white;
+}
+@mixin wrapper-settings($max-width) {
+  width: 100%;
+  max-width: $max-width;
+}
