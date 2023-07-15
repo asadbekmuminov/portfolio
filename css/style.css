@@ -394,7 +394,7 @@ body {
 body {
   font-size: 1.8rem;
   font-weight: 500;
-  line-height: 1.55rem;
+  line-height: 1.55;
   color: #ffffff;
   font-family: "Space Grotesk", sans-serif;
 }
@@ -454,7 +454,7 @@ body {
 .hero__info div p {
   font-size: 1.8rem;
   font-weight: 500;
-  line-height: 1.55rem;
+  line-height: 1.55;
   color: #ffffff;
   line-height: 2rem;
 }
@@ -713,7 +713,7 @@ body {
 .techno__info_box p {
   font-size: 1.8rem;
   font-weight: 500;
-  line-height: 1.55rem;
+  line-height: 1.55;
   color: #ffffff;
   color: #d9d9d9;
 }
@@ -876,7 +876,7 @@ body {
 .project__content_mini-box p {
   font-size: 1.8rem;
   font-weight: 500;
-  line-height: 1.55rem;
+  line-height: 1.55;
   color: #ffffff;
   color: #d9d9d9;
 }
@@ -975,6 +975,9 @@ body {
   }
 }
 @media (max-width: 750px) {
+  .projects__wrapper {
+    padding-bottom: 9rem;
+  }
   .projects__content_wrapper {
     display: flex;
     flex-direction: column;
@@ -1012,6 +1015,9 @@ body {
 }
 
 @media (max-width: 610px) {
+  .projects__wrapper {
+    padding-bottom: 11rem;
+  }
   .projects__content_box {
     width: 100%;
     max-width: 40rem;
@@ -1050,6 +1056,9 @@ body {
   }
 }
 @media (max-width: 400px) {
+  .projects__wrapper {
+    padding-bottom: 7rem;
+  }
   .projects__title {
     align-items: center;
   }
@@ -1064,6 +1073,167 @@ body {
   .project__img_box img {
     width: 30rem;
     height: 21rem;
+  }
+}
+.contact {
+  background-color: #242424;
+  background-image: url(../../images/contact-bg-img.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom 4.7rem;
+}
+
+.contact__border {
+  padding-top: 8.4rem;
+  border-bottom: 1px solid #ffffff;
+}
+
+.contact__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 9.2rem;
+}
+
+.contact__info_wrapper {
+  width: 100%;
+  max-width: 44.5rem;
+}
+.contact__info_wrapper h2 {
+  font-size: 8.8rem;
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  line-height: 1;
+  color: #ffffff;
+  margin-bottom: 3.6rem;
+}
+.contact__info_wrapper p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #ffffff;
+}
+
+.contact__form {
+  width: 100%;
+  max-width: 44.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.contact__form input {
+  width: 100%;
+  background-color: #242424;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 1.6rem;
+  margin-bottom: 3.2rem;
+  padding-left: 2.4rem;
+  color: #ffffff;
+}
+.contact__form button {
+  width: 14.2rem;
+  background-color: #242424;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.625;
+  color: #ffffff;
+  border: none;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #4ee1a0;
+}
+.contact__form button:hover {
+  color: #4ee1a0;
+}
+
+.contact__massage__input {
+  padding-bottom: 8.1rem !important;
+}
+
+@media (max-width: 990px) {
+  .contact__info_wrapper {
+    width: 100%;
+    max-width: 35rem;
+  }
+  .contact__info_wrapper h2 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 3.6rem;
+  }
+  .contact__info_wrapper p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.55;
+    color: #ffffff;
+  }
+  .contact__form {
+    width: 100%;
+    max-width: 35rem;
+  }
+}
+@media (max-width: 800px) {
+  .contact {
+    background-color: #242424;
+    background-image: url(../../images/contact-bg-img-responsive.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom 2rem;
+  }
+  .contact__wrapper {
+    display: flex;
+    justify-content: none;
+    flex-direction: column;
+    gap: 4.8rem;
+    align-items: center;
+  }
+  .contact__info_wrapper {
+    width: 100%;
+    max-width: 44.5rem;
+  }
+  .contact__info_wrapper h2 {
+    text-align: center;
+    margin-bottom: 3.6rem;
+    font-size: 8.8rem;
+    font-weight: 700;
+    letter-spacing: -2.5px;
+    line-height: 1;
+    color: #ffffff;
+  }
+  .contact__info_wrapper p {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.55;
+    color: #ffffff;
+  }
+  .contact__form {
+    width: 100%;
+    max-width: 44.5rem;
+  }
+  .contact__border {
+    padding-top: 5rem;
+  }
+}
+@media (max-width: 575px) {
+  .contact__info_wrapper {
+    width: 100%;
+    max-width: 35rem;
+  }
+  .contact__info_wrapper h2 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 3.6rem;
+  }
+  .contact__info_wrapper p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.55;
+    color: #ffffff;
+  }
+  .contact__form {
+    width: 100%;
+    max-width: 35rem;
   }
 }
 main {

@@ -128,6 +128,9 @@
   }
 }
 @media (max-width: 750px) {
+  .projects__wrapper {
+    padding-bottom: 9rem;
+  }
   .projects__content_wrapper {
     display: flex;
     flex-direction: column;
@@ -157,6 +160,9 @@
   @include font-l;
 }
 @media (max-width: 610px) {
+  .projects__wrapper {
+    padding-bottom: 11rem;
+  }
   .projects__content_box {
     @include wrapper-settings(40rem);
   }
@@ -192,6 +198,9 @@
   }
 }
 @media (max-width: 400px) {
+  .projects__wrapper {
+    padding-bottom: 7rem;
+  }
   .projects__title {
     align-items: center;
   }
