@@ -150,6 +150,9 @@
   }
 }
 .projects__btn_wrapper-responsive {
+  a {
+    font-size: 0.8rem;
+  }
   display: flex;
   gap: 3rem;
 }
