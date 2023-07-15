@@ -1,0 +1,130 @@
+.techno {
+  background-image: url(../../images/techno-bg-img.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom 6.45rem;
+}
+
+.techno__wrapper {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $white;
+  gap: 5.8rem;
+  padding-bottom: 14rem;
+}
+.techno__wrapper_top {
+  padding-top: 7.2rem;
+  display: flex;
+  gap: 3.5rem;
+}
+.techno__info_box {
+  @include wrapper-settings(34.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  h2 {
+    @include font-l;
+  }
+  p {
+    @include font-text;
+    color: $grey;
+  }
+}
+.techno__wrapper_responsive {
+  display: none;
+}
+
+.techno__wrapper_bottom {
+  display: flex;
+  gap: 3.5rem;
+}
+@media (max-width: 1000px) {
+  .hero__wrapper {
+    display: flex;
+    margin-bottom: 7.4rem;
+  }
+  .techno__wrapper_bottom {
+    gap: 0;
+  }
+  .techno__wrapper_top {
+    gap: 0;
+  }
+  .techno__info_box {
+    h2 {
+      @include font-setting(3.5rem, 700, 1.16, $white);
+    }
+    p {
+      @include font-setting(1.4rem, 500, 1.55, $grey);
+      color: $grey;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .techno {
+    background-image: url(../../images/techno-bg-img-responsive.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+  .techno__info_box {
+    h2 {
+      @include font-setting(3rem, 700, 1.16, $white);
+    }
+    p {
+      @include font-setting(1.1rem, 500, 1.55, $grey);
+      color: $grey;
+    }
+  }
+  .techno__wrapper {
+    display: none;
+  }
+  .techno__wrapper_responsive {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid $white;
+    gap: 5.8rem;
+    padding-bottom: 14rem;
+  }
+  .techno__wrapper_center {
+    display: flex;
+  }
+  .techno__info_box {
+    @include wrapper-settings(30rem);
+  }
+}
+@media (max-width: 520px) {
+  .techno__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+  }
+  .techno__wrapper_responsive {
+    display: none;
+  }
+  .techno__info_box {
+    text-align: center;
+    gap: 0.1rem;
+  }
+  .techno__wrapper {
+  }
+  .techno__wrapper_top {
+    padding-top: 5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    @include wrapper-settings(20rem);
+  }
+  .techno__wrapper_bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    padding-bottom: 4rem;
+    @include wrapper-settings(20rem);
+  }
+  .techno__border {
+    display: flex;
+    height: 1px;
+    width: 100%;
+    background-color: $white;
+  }
+}

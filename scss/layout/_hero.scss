@@ -6,7 +6,7 @@
 
 .hero__wrapper {
   display: flex;
-  margin-bottom: 10.4rem;
+  margin-bottom: 15.4rem;
   position: relative;
 }
 .hero__info {
@@ -17,19 +17,7 @@
     @include font-xl;
     margin-bottom: 4.3rem;
   }
-  span {
-    position: relative;
-    z-index: 1;
-    &::before {
-      content: "";
-      height: 5px;
-      background-color: $green;
-      width: 100%;
-      position: absolute;
-      bottom: 0.9rem;
-      z-index: -1;
-    }
-  }
+
   div {
     margin-bottom: 5.6rem;
     @include wrapper-settings(44.5rem);
@@ -66,39 +54,10 @@
     h1 {
       @include font-setting(6rem, 700, 1, $white);
     }
-    span {
-      position: relative;
-      z-index: 1;
-      &::after {
-        content: "";
-        height: 5px;
-        background-color: $green;
-        width: 34rem;
-        position: absolute;
-        right: 22rem;
-        bottom: 0.9rem;
-        z-index: -1;
-      }
-    }
   }
 }
 
 @media (max-width: 1000px) {
-  .hero__info span {
-    position: relative;
-    z-index: 1;
-    &::after {
-      content: "";
-      display: none;
-      height: 5px;
-      background-color: $green;
-      width: 34rem;
-      position: absolute;
-      right: 22rem;
-      bottom: 0.9rem;
-      z-index: -1;
-    }
-  }
   .hero {
     background-image: url(../../images/hero-bg-img-responsive.svg);
     background-repeat: no-repeat;
@@ -179,39 +138,51 @@
     background-repeat: no-repeat;
     background-position: right top 49.8rem, left top 13.3rem;
   }
-}
-
-@media (max-width: 440px) {
-  .hero__img {
-    @include wrapper-settings(20rem);
-  }
-  .hero__img_wrapper {
-    @include wrapper-settings(20rem);
-  }
-  .hero__img_man {
-    width: 20rem;
-    height: 48.6rem;
+  .hero__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .hero__info {
     h1 {
       @include font-setting(4rem, 700, 1, $white);
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .hero {
+    background-image: url(../../images/hero-oval-img-responsive.svg),
+      url(../../images/hero-bg-img-responsive-small.svg);
+    background-repeat: no-repeat;
+    background-position: right top 25rem, left top 13.3rem;
+  }
+  .hero__img {
+    @include wrapper-settings(17.4rem);
+  }
+  .hero__img_wrapper {
+    @include wrapper-settings(17.4rem);
+  }
+  .hero__img_man {
+    width: 17.4rem;
+    height: 24.2rem;
+  }
+  .hero__info {
+    h1 {
+      @include font-setting(4rem, 700, 1, $white);
+      text-align: center;
+    }
+    p {
+      text-align: center;
     }
   }
   .hero__info {
-    span {
-      position: relative;
-      z-index: 1;
-      &::after {
-        content: "";
-        display: block;
-        height: 0px;
-        background-color: $green;
-        width: 34rem;
-        position: absolute;
-        right: 5rem;
-        bottom: 0.9rem;
-        z-index: -1;
-      }
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
