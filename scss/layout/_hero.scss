@@ -1,0 +1,217 @@
+.hero {
+  background-image: url(../../images/hero-bg-img.svg);
+  background-repeat: no-repeat;
+  background-position: left top 13.3rem;
+}
+
+.hero__wrapper {
+  display: flex;
+  margin-bottom: 10.4rem;
+  position: relative;
+}
+.hero__info {
+  padding-top: 19.8rem;
+  position: absolute;
+  @include wrapper-settings(70.6rem);
+  h1 {
+    @include font-xl;
+    margin-bottom: 4.3rem;
+  }
+  span {
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      height: 5px;
+      background-color: $green;
+      width: 100%;
+      position: absolute;
+      bottom: 0.9rem;
+      z-index: -1;
+    }
+  }
+  div {
+    margin-bottom: 5.6rem;
+    @include wrapper-settings(44.5rem);
+    p {
+      @include font-text;
+      line-height: 2rem;
+    }
+  }
+}
+.hero__img {
+  @include wrapper-settings(44.488rem);
+  margin-left: auto;
+  background-color: $dark-grey;
+  img {
+    object-fit: cover;
+  }
+}
+.hero__img_wrapper {
+  @include wrapper-settings(44.488rem);
+  max-height: 69.8rem;
+  padding-top: 14.1rem;
+}
+.hero__oval_img {
+  position: absolute;
+  top: 52.1rem;
+  right: 38rem;
+}
+.hero__oval_responsive {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .hero__info {
+    h1 {
+      @include font-setting(6rem, 700, 1, $white);
+    }
+    span {
+      position: relative;
+      z-index: 1;
+      &::after {
+        content: "";
+        height: 5px;
+        background-color: $green;
+        width: 34rem;
+        position: absolute;
+        right: 22rem;
+        bottom: 0.9rem;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero__info span {
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: "";
+      display: none;
+      height: 5px;
+      background-color: $green;
+      width: 34rem;
+      position: absolute;
+      right: 22rem;
+      bottom: 0.9rem;
+      z-index: -1;
+    }
+  }
+  .hero {
+    background-image: url(../../images/hero-bg-img-responsive.svg);
+    background-repeat: no-repeat;
+    background-position: left top 13.3rem;
+  }
+  .hero__info {
+    @include wrapper-settings(44.5rem);
+  }
+  .hero__oval_img {
+    display: none;
+  }
+
+  .hero__img {
+    @include wrapper-settings(35rem);
+  }
+  .hero__img_man {
+    width: 35rem;
+    height: 48.6rem;
+  }
+  .hero__oval_responsive {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .hero__img_wrapper {
+    @include wrapper-settings(35rem);
+  }
+}
+
+@media (max-width: 850px) {
+  .hero__info {
+    @include wrapper-settings(38.5rem);
+  }
+  .hero__img {
+    @include wrapper-settings(30rem);
+  }
+  .hero__img_wrapper {
+    @include wrapper-settings(30rem);
+  }
+  .hero__img_man {
+    width: 30rem;
+    height: 48.6rem;
+  }
+}
+@media (max-width: 730px) {
+  .hero__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: start;
+    position: static;
+  }
+
+  .hero__info {
+    position: static;
+    padding-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .hero__img {
+    background: linear-gradient(rgba(36, 36, 36, 0), rgba(36, 36, 36, 1));
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 4rem;
+  }
+  .hero__img_wrapper {
+    position: static;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .hero__oval_responsive {
+    position: static;
+    display: none;
+  }
+  .hero {
+    background-image: url(../../images/hero-oval-img-responsive.svg),
+      url(../../images/hero-bg-img-responsive.svg);
+    background-repeat: no-repeat;
+    background-position: right top 49.8rem, left top 13.3rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero__img {
+    @include wrapper-settings(20rem);
+  }
+  .hero__img_wrapper {
+    @include wrapper-settings(20rem);
+  }
+  .hero__img_man {
+    width: 20rem;
+    height: 48.6rem;
+  }
+  .hero__info {
+    h1 {
+      @include font-setting(4rem, 700, 1, $white);
+    }
+  }
+  .hero__info {
+    span {
+      position: relative;
+      z-index: 1;
+      &::after {
+        content: "";
+        display: block;
+        height: 0px;
+        background-color: $green;
+        width: 34rem;
+        position: absolute;
+        right: 5rem;
+        bottom: 0.9rem;
+        z-index: -1;
+      }
+    }
+  }
+}

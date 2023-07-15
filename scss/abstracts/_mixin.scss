@@ -24,6 +24,12 @@
   line-height: $text-line-height;
   color: $white;
 }
+@mixin font-setting($size, $weight, $line, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line;
+  color: $color;
+}
 @mixin wrapper-settings($max-width) {
   width: 100%;
   max-width: $max-width;

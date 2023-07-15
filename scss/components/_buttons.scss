@@ -1,0 +1,19 @@
+.btn {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  letter-spacing: 2.29px;
+  color: $white;
+  position: relative;
+  &::before {
+    content: "";
+    height: 2px;
+    background-color: $green;
+    width: 100%;
+    position: absolute;
+    bottom: -1rem;
+  }
+}
+.btn:hover {
+  color: $green;
+}
