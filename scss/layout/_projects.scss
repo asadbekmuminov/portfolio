@@ -148,13 +148,13 @@
       height: 40rem;
     }
   }
-}
-.projects__btn_wrapper-responsive {
-  a {
-    font-size: 0.8rem;
+  .projects__btn_wrapper-responsive {
+    display: flex;
+    gap: 3rem;
+    a {
+      font-size: 0.8rem;
+    }
   }
-  display: flex;
-  gap: 3rem;
 }
 .projects__btn_wrapper {
   display: none;
